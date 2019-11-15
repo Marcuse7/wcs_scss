@@ -1,18 +1,8 @@
-// ----
-// Sass (vundefined)
-// Compass (vundefined)
-// dart-sass (v1.18.0)
-// ----
-
-
 h1, h2, body {
   font-family: 'Aniron';
-src:     url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.woff') format('woff'),
-    url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.svg#Aniron') format('svg'),
-    url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.eot'),
-    url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
+  src: url("https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.woff") format("woff"), url("https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.svg#Aniron") format("svg"), url("https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.eot"), url("https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .wanted {
@@ -25,33 +15,113 @@ p {
 
 #move_up {
   position: relative;
-  transform: translateY(-80px); 
+  transform: translateY(-80px);
 }
 
-@mixin ring ($size, $color) {
-  height: $size;
-  width: $size;
+.ring_red {
+  height: 50px;
+  width: 50px;
   position: relative;
   display: inline-block;
   margin: 20px;
   top: 30px;
-  border: $size/20 solid $color;
+  border: 2.5px solid red;
   border-radius: 50%;
-  box-shadow: inset $size/30 $size/30 $size/10 2px darken($color, 30%), $size/30 $size/30 10px 2px darken($color, 30%);
-}
-
-.ring_red {
-  @include ring(50px, red);
+  box-shadow: inset 1.6666666667px 1.6666666667px 5px 2px #660000, 1.6666666667px 1.6666666667px 10px 2px #660000;
 }
 
 .ring_yellow {
-  @include ring(100px, orange);
+  height: 100px;
+  width: 100px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: 5px solid orange;
+  border-radius: 50%;
+  box-shadow: inset 3.3333333333px 3.3333333333px 10px 2px #664200, 3.3333333333px 3.3333333333px 10px 2px #664200;
 }
 
-@for $i from 1 through 6 {
-  .ring_grey:nth-child(#{$i}) {
-    @include ring(10px + $i * 20px, grey);
-    left: 70px + $i * -70px;
-    transform: translateY(50%);
-  }
+.ring_grey:nth-child(1) {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: 1.5px solid grey;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 3px 2px #343434, 1px 1px 10px 2px #343434;
+  left: 0px;
+  transform: translateY(50%);
+}
+
+.ring_grey:nth-child(2) {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: 2.5px solid grey;
+  border-radius: 50%;
+  box-shadow: inset 1.6666666667px 1.6666666667px 5px 2px #343434, 1.6666666667px 1.6666666667px 10px 2px #343434;
+  left: -70px;
+  transform: translateY(50%);
+}
+
+.ring_grey:nth-child(3) {
+  height: 70px;
+  width: 70px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: 3.5px solid grey;
+  border-radius: 50%;
+  box-shadow: inset 2.3333333333px 2.3333333333px 7px 2px #343434, 2.3333333333px 2.3333333333px 10px 2px #343434;
+  left: -140px;
+  transform: translateY(50%);
+}
+
+.ring_grey:nth-child(4) {
+  height: 90px;
+  width: 90px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: 4.5px solid grey;
+  border-radius: 50%;
+  box-shadow: inset 3px 3px 9px 2px #343434, 3px 3px 10px 2px #343434;
+  left: -210px;
+  transform: translateY(50%);
+}
+
+.ring_grey:nth-child(5) {
+  height: 110px;
+  width: 110px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: 5.5px solid grey;
+  border-radius: 50%;
+  box-shadow: inset 3.6666666667px 3.6666666667px 11px 2px #343434, 3.6666666667px 3.6666666667px 10px 2px #343434;
+  left: -280px;
+  transform: translateY(50%);
+}
+
+.ring_grey:nth-child(6) {
+  height: 130px;
+  width: 130px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: 6.5px solid grey;
+  border-radius: 50%;
+  box-shadow: inset 4.3333333333px 4.3333333333px 13px 2px #343434, 4.3333333333px 4.3333333333px 10px 2px #343434;
+  left: -350px;
+  transform: translateY(50%);
 }
