@@ -1,0 +1,57 @@
+// ----
+// Sass (vundefined)
+// Compass (vundefined)
+// dart-sass (v1.18.0)
+// ----
+
+
+h1, h2, body {
+  font-family: 'Aniron';
+src:     url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.woff') format('woff'),
+    url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.svg#Aniron') format('svg'),
+    url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.eot'),
+    url('https://webfonts.ffonts.net/webfonts/A/N/Aniron/Aniron.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wanted {
+  position: relative;
+}
+
+p {
+  font-size: 2em;
+}
+
+#move_up {
+  position: relative;
+  transform: translateY(-80px); 
+}
+
+@mixin ring ($size, $color) {
+  height: $size;
+  width: $size;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  top: 30px;
+  border: $size/20 solid $color;
+  border-radius: 50%;
+  box-shadow: inset $size/30 $size/30 $size/10 2px darken($color, 30%), $size/30 $size/30 10px 2px darken($color, 30%);
+}
+
+.ring_red {
+  @include ring(50px, red);
+}
+
+.ring_yellow {
+  @include ring(100px, orange);
+}
+
+@for $i from 1 through 6 {
+  .ring_grey:nth-child(#{$i}) {
+    @include ring(10px + $i * 20px, grey);
+    left: 70px + $i * -70px;
+    transform: translateY(50%);
+  }
+}
