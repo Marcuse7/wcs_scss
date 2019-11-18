@@ -37,7 +37,7 @@ p {
   top: 30px;
   border: $size/20 solid $color;
   border-radius: 50%;
-  box-shadow: inset $size/30 $size/30 $size/10 2px darken($color, 30%), $size/30 $size/30 10px 2px darken($color, 30%);
+  box-shadow: inset $size/30 $size/30 $size/10 1px darken($color, 30%), $size/30 $size/30 $size/10 2px darken($color, 30%);
 }
 
 .ring_red {
